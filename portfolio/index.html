@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stein S | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLES BACKGROUND */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#00eaff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00eaff;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.profile{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00eaff;
+box-shadow:0 0 25px #00eaff;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero span{
+color:#00eaff;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#00eaff;
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #00eaff;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+section h1{
+text-align:center;
+margin-bottom:40px;
+color:#00eaff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:10px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(0,234,255,0.1);
+box-shadow:0 0 15px #00eaff;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+
+<h2>Stein S</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<img src="photo.jpg" class="profile">
+
+<h1>Hello I'm <span>Stein S</span></h1>
+
+<p id="typing"></p>
+
+<button class="btn" onclick="document.getElementById('projects').scrollIntoView()">
+View Projects
+</button>
+
+</div>
+
+<section id="about">
+
+<h1>About Me</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<p>
+AI & Data Science student interested in Linux, DevOps and MLOps.
+Completed a DevOps internship working with Docker, GitHub and CI/CD.
+Currently learning Python and Machine Learning to build ML pipelines.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h1>Skills</h1>
+
+<div class="grid">
+
+<div class="card">Python (Learning)</div>
+<div class="card">Docker</div>
+<div class="card">Git & GitHub</div>
+<div class="card">CI/CD Basics</div>
+<div class="card">Linux</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h1>Projects</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Dockerized Python App</h3>
+<p>Simple Python application containerized using Docker.</p>
+</div>
+
+<div class="card">
+<h3>CI/CD Demo</h3>
+<p>GitHub Actions pipeline for automation.</p>
+</div>
+
+<div class="card">
+<h3>Linux Automation</h3>
+<p>Bash scripts for system automation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h1>Contact</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<p>Email: yourmail@gmail.com</p>
+<p>GitHub: github.com/yourusername</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Stein S Portfolio</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+
+particles:{
+
+number:{value:80},
+
+size:{value:3},
+
+move:{speed:2},
+
+line_linked:{enable:true},
+
+color:{value:"#00eaff"}
+
+}
+
+});
+
+</script>
+
+<script>
+
+const text="AI & Data Science Student | DevOps Intern | Aspiring MLOps Engineer";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,50);
+
+}
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
